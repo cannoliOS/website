@@ -22,10 +22,10 @@ An opinionated setup that brings together:
 
 - Defined Directory Structure - like Scorza the structure is heavily inspired by MinUI. Flat, organized with no
   guesswork.
-- Scorza - a custom frontend / launcher with just the right amount of filling!
-- RicottaArch - an optional fork of RetroArch with a dumb name so the maintainers don't need to support a custom menu
+- [Scorza](https://github.com/cannoliOS/scorza) - a custom frontend / launcher with just the right amount of filling!
+- [RicottaArch](https://github.com/cannoliOS/RicottaArch) - an optional fork of RetroArch with a dumb name so the maintainers don't need to support a custom menu
   driver
-- LowFatRicotta - an experimental (_vibe coded_) libretro core runner inspired by minarch that is included inside Scorza.
+- [LowFatRicotta](https://github.com/cannoliOS/scorza) - an experimental (_vibe coded_) libretro core runner inspired by minarch that is included inside Scorza.
 
 All of this goodness is served up by [Nana's Kitchen](https://kitchen.cannoli.dev), a WebADB client that will configure
 your device with all the necessary apps, directory structures and configs.
