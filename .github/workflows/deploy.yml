@@ -24,13 +24,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Build site
+        run: uv run mkdocs build
+
+      - name: Copy CNAME
+        run: cp CNAME site/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: site/
 
       - name: Deploy to GitHub Pages
         id: deployment

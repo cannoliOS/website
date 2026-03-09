@@ -1,0 +1,59 @@
+site_name: cannoli_OS
+docs_dir: docs
+site_url: https://cannoli.cc/
+site_description: cannoli_OS documentation
+theme:
+  name: material
+  custom_dir: overrides/
+  logo: resources/img/logo.png
+  favicon: resources/img/logo.png
+  language: en
+  palette:
+    scheme: slate
+  font:
+    text: Inter
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - Home: index.md
+
+copyright: "&copy; 2026 cannoli_OS Team"
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cannoliOS
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/QKTjTQ796q
+
+extra_css:
+  - resources/css/theme.css
+
+watch:
+  - docs
+  - mkdocs.yml
+  - overrides
