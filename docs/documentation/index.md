@@ -2,7 +2,12 @@
 
 cannoli_OS is an opinionated setup for Retro Emulation on Android.
 
-Android has a reputation for being tedious to setup. cannoli_OS looks to change this.
+Android has a reputation for being tedious to set up. cannoli_OS looks to change this.
+
+## What is an emulator?
+
+An emulator is software that mimics old gaming hardware. It allows your Android device
+to pretend to be a Game Boy, a SNES, a PlayStation, etc. 
 
 ## The Inspiration
 
