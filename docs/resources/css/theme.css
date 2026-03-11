@@ -104,6 +104,10 @@
   display: none;
 }
 
+.device-above-logo {
+  display: none;
+}
+
 .device-below-btn {
   display: none;
 }
@@ -181,14 +185,32 @@
     height: auto;
   }
 
-  .device-below-btn {
-    display: none;
+  .device-above-logo {
+    display: block;
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    right: 0;
     text-align: center;
-    margin-top: 0.75rem;
+    visibility: hidden;
+  }
+
+  .device-above-logo.visible {
+    visibility: visible;
+  }
+
+  .device-below-btn {
+    display: block;
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    visibility: hidden;
   }
 
   .device-below-btn.visible {
-    display: block;
+    visibility: visible;
   }
 
   .device-below-btn .md-button {

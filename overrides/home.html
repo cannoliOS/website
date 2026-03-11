@@ -18,6 +18,7 @@
       var content = document.querySelector('.device-screen-content');
       var video = document.querySelector('.device-screen');
       var belowBtn = document.querySelector('.device-below-btn');
+      var aboveLogo = document.querySelector('.device-above-logo');
       if (!content || !video) return;
       video.pause();
       function toggle() {
@@ -25,15 +26,17 @@
         setTimeout(function() {
           video.play();
           if (belowBtn) belowBtn.classList.add('visible');
+          if (aboveLogo) aboveLogo.classList.add('visible');
         }, 600);
         setTimeout(function() {
           video.pause();
           if (belowBtn) belowBtn.classList.remove('visible');
+          if (aboveLogo) aboveLogo.classList.remove('visible');
           content.classList.remove('fade-out');
-          setTimeout(toggle, 10000);
+          setTimeout(toggle, 5000);
         }, 16000);
       }
-      setTimeout(toggle, 10000);
+      setTimeout(toggle, 5000);
     })();
   </script>
 {% endblock %}
