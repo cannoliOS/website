@@ -10,8 +10,7 @@ theme:
   language: en
   palette:
     scheme: slate
-  font:
-    text: Inter
+  font: false
   features:
     - search.highlight
     - search.suggest

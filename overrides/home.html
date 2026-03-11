@@ -12,4 +12,30 @@
 
 {% block content %}
   {{ page.content }}
+  <script>
+    (function() {
+      if (window.innerWidth > 900) return;
+      var content = document.querySelector('.device-screen-content');
+      var video = document.querySelector('.device-screen');
+      var belowBtn = document.querySelector('.device-below-btn');
+      if (!content || !video) return;
+      video.pause();
+      function toggle() {
+        content.classList.add('fade-out');
+        setTimeout(function() {
+          video.play();
+          if (belowBtn) belowBtn.classList.add('visible');
+        }, 600);
+        setTimeout(function() {
+          video.pause();
+          if (belowBtn) belowBtn.classList.remove('visible');
+          content.classList.remove('fade-out');
+          setTimeout(toggle, 10000);
+        }, 16000);
+      }
+      setTimeout(toggle, 10000);
+    })();
+  </script>
 {% endblock %}
+
+{% block footer %}{% endblock %}

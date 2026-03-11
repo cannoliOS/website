@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MPlus1c';
+  src: url('../fonts/MPlus-1c-NerdFont-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root,
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #4a9ab5;
@@ -5,6 +12,8 @@
   --md-primary-fg-color--dark: #357a94;
   --md-accent-fg-color: #80c1dd;
   --md-accent-fg-color--transparent: rgba(128, 193, 221, 0.1);
+  --md-text-font: 'MPlus1c', monospace;
+  --md-code-font: 'MPlus1c', monospace;
 }
 
 [data-md-color-scheme="slate"] {
@@ -66,8 +75,9 @@
 
 .hero-device {
   position: relative;
-  flex-shrink: 0;
+  flex-shrink: 1;
   width: 590px;
+  min-width: 300px;
 }
 
 .device-frame {
@@ -82,22 +92,123 @@
 .device-screen {
   position: absolute;
   z-index: 1;
-  top: 6.36%;
-  left: 11.9%;
-  width: 76.25%;
-  height: 48.64%;
+  top: 4.1%;
+  left: 9.1%;
+  width: 81.8%;
+  height: 48.3%;
   object-fit: cover;
   border-radius: 6px;
 }
 
-@media (max-width: 768px) {
+.device-screen-content {
+  display: none;
+}
+
+.device-below-btn {
+  display: none;
+}
+
+@media (max-width: 900px) {
   .hero {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
+  }
+
+  .hero-content {
+    display: none;
   }
 
   .hero-device {
-    width: 360px;
+    display: block;
+    width: 320px;
+    max-width: 90vw;
+  }
+
+  .device-screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    top: 4.1%;
+    left: 9.1%;
+    width: 81.8%;
+    height: 48.3%;
+    border-radius: 6px;
+    background: #000;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.6s ease;
+    gap: 0.2rem;
+  }
+
+  .device-screen-content.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .device-screen-content h1,
+  .device-screen-content h3,
+  .device-screen-content .md-button {
+    font-family: 'MPlus1c', monospace;
+    font-weight: 700;
+  }
+
+  .device-screen-content h1 {
+    font-size: 1.2rem;
+    margin: 0.2rem 0 !important;
+    color: #fff;
+  }
+
+  .device-screen-content h3 {
+    font-size: 0.5rem;
+    margin: 0 0 0.3rem 0 !important;
+    color: #aaa;
+  }
+
+  .device-screen-content .md-button {
+    font-size: 0.4rem;
+    padding: 0.2em 0.5em;
+    margin: 0.15rem;
+    border-width: 1px;
+  }
+
+  .device-screen-content img {
+    width: 50px;
+    height: auto;
+  }
+
+  .device-below-btn {
+    display: none;
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  .device-below-btn.visible {
+    display: block;
+  }
+
+  .device-below-btn .md-button {
+    font-size: 0.7rem;
+  }
+
+  .hero h3 {
+    font-size: 0.75rem;
+  }
+
+  .md-footer-meta__inner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .md-social {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -168,4 +279,27 @@
   background-color: #faf0dc;
   border-color: #faf0dc;
   color: #1a1a2e;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.hero-social a {
+  display: flex;
+  align-items: center;
+}
+
+.hero-social svg {
+  width: 24px;
+  height: 24px;
+  fill: #888;
+  transition: fill 0.2s;
+}
+
+.hero-social a:hover svg {
+  fill: #ccc;
 }
