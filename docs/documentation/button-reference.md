@@ -1,11 +1,11 @@
 # Button Reference
 
 !!! warning "This Documentation Sucks"
-    cannoli_OS is in early preview. Expect the docs to get better as things progress and get finalized.
+    Cannoli is in early preview. Expect the docs to get better as things progress and get finalized.
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
-Scorza supports both **Xbox** and **Nintendo** button layouts. Pick one in settings.
+Cannoli supports both **Xbox** and **Nintendo** button layouts. Pick one in settings.
 
 In **Xbox** layout, A confirms and B goes back. In **Nintendo** layout, it's the opposite.
 

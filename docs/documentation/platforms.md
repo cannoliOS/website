@@ -2,7 +2,7 @@
 
 cannoli_OS supports a wide range of retro platforms out of the box.
 
-Platforms are run using either the built-in [LowFatRicotta](https://github.com/cannoliOS/scorza) core runner,
+Platforms are run using either the built-in core runner,
 RetroArch or a standalone emulator.
 
 The **Tag** column shows the accepted directory name for your ROMs.

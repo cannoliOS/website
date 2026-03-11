@@ -65,8 +65,8 @@ You might expect to take your legally dumped `gba_bios.bin` and shove it into `C
 
 Sadly this isn't the case.
 
-Scorza supports launching games with both its internal core runner and with RetroArch. RetroArch expects a single BIOS folder with everything thrown in together. 
+Cannoli supports launching games with both its internal core runner and with RetroArch. RetroArch expects a single BIOS folder with everything thrown in together. 
 
-Instead of having you upload BIOS files twice in both formats, Scorza just uses RetroArch's scheme.
+Instead of having you upload BIOS files twice in both formats, Cannoli just uses RetroArch's scheme.
 
 It isn't clean, completely breaks expectations and diverges from how MinUI handles it but what are you gonna do? Life ain't perfect.

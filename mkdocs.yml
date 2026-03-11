@@ -1,7 +1,7 @@
-site_name: cannoli_OS
+site_name: Cannoli
 docs_dir: docs
 site_url: https://cannoli.dev/
-site_description: cannoli_OS Documentation
+site_description: Cannoli Documentation
 theme:
   name: material
   custom_dir: overrides/

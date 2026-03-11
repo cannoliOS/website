@@ -5,13 +5,13 @@
 
     I'd rather just get feedback than commit to making good docs against a moving target.
 
-## Installing Scorza
+## Installing Cannoli
 
-You can snag the latest early preview from the [GitHub Releases](https://github.com/cannoliOS/scorza/releases/latest).
+You can snag the latest early preview from the [GitHub Releases](https://github.com/cannoliOS/cannoli/releases/latest).
 
 ## First Launch
 
-After installing Scorza you will have the Cannoli app.
+After installing you will have the Cannoli app.
 
 On your first run you will be prompted for permission to manage all files.
 
@@ -49,7 +49,7 @@ From here you will see two buttons on the top, one for BIOS and one for Wallpape
 
 If you have either of those click the button and upload 'em.
 
-Underneath you will see a big list of platforms that Scorza either supports internally through LowFatRicotta or by
+Underneath you will see a big list of platforms that Cannoli either supports internally through the built in core runner or by
 acting as a launcher to open RetroArch or a standalone emulator.
 
 Click on one of them. You will have four options per platform.
