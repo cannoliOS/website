@@ -6,7 +6,7 @@ Android has a reputation for being tedious to set up. cannoli_OS looks to change
 
 ## What is an emulator?
 
-An emulator is software that mimics old gaming hardware. It allows your Android device
+An emulator is software that mimics gaming hardware. It allows your Android device
 to pretend to be a Game Boy, a SNES, a PlayStation, etc. 
 
 ## The Inspiration
