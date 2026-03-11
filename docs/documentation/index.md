@@ -16,24 +16,25 @@ Without his masterpiece this derivative would not exist.
 
 For that I thank him, and apologize for this bastardization of his creation.
 
-## So what is the plan?
+## Cut to the chase!
 
-An opinionated setup that brings together:
+Here is how cannoli_OS is planning to bring the convenience of MinUI to Android.
 
-- Defined Directory Structure - like Scorza the structure is heavily inspired by MinUI. Flat, organized with no
-  guesswork.
 - [Scorza](https://github.com/cannoliOS/scorza) - a custom frontend / launcher with just the right amount of filling!
-- [RicottaArch](https://github.com/cannoliOS/RicottaArch) - an optional fork of RetroArch with a dumb name so the maintainers don't need to support a custom menu
-  driver
-- [LowFatRicotta](https://github.com/cannoliOS/scorza) - an experimental (_vibe coded_) libretro core runner inspired by minarch that is included inside Scorza.
+- [LowFatRicotta](https://github.com/cannoliOS/scorza/tree/main/app/src/main/cpp) - an experimental (_vibe coded_) libretro core runner inspired by
+  minarch that is included inside Scorza.
 
-All of this goodness is served up by [Nana's Kitchen](https://kitchen.cannoli.dev), a WebADB client that will configure
-your device with all the necessary apps, directory structures and configs.
+The following are in progress but not quite ready for showtime.
 
-Nana can even help you upload your legally sourced BIOS files and ROMs.
+- [RicottaArch](https://github.com/cannoliOS/RicottaArch) - an optional fork of RetroArch with a dumb name so the
+  maintainers don't need to support a custom menu driver.
+- Nonna's Bakery, a web client that lets you reach into the cookie jar. Upload your
+  legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
 
-It has to be said. Nana is too old for prison. And too gangster. 
+## Don't make her grab her rolling pin!
+
+It has to be said. Nonna is too old for prison. And too gangster.
 
 **cannoli_OS does not provide copyrighted materials nor advise you on how to get them.**
 
-If you ask for these anywhere (Discord, GitHub, etc.) she'll get out her rolling pin.
+If you ask for these anywhere (Discord, GitHub, etc.) say goodbye to your knuckles.

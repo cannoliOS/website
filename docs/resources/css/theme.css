@@ -30,11 +30,17 @@
 }
 
 
-.md-content__inner > h1 {
+.md-content__inner > h1:first-child {
   display: none;
-  margin: 0;
-  padding: 0;
-  height: 0;
+}
+
+.md-content__inner > h1:first-child + * {
+  margin-top: 0 !important;
+}
+
+.md-content__inner {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 
@@ -88,6 +94,10 @@
 
 .md-footer {
   background-color: #4a9ab5;
+}
+
+.md-typeset table {
+  width: 100%;
 }
 
 .hero .md-button--accent {
