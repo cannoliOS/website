@@ -124,7 +124,7 @@
 
   .hero-device {
     display: block;
-    width: 320px;
+    width: 380px;
     max-width: 90vw;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .device-screen-content img {
-    width: 50px;
+    width: 60px;
     height: auto;
   }
 
