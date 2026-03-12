@@ -11,7 +11,7 @@ Place your ROM files in `Cannoli/Roms/{Tag}`.
 
 For example, Game Boy Advance will be in `Cannoli/Roms/GBA`.
 
-Cores marked with :material-check-bold:{ .shipped } are shipped with Scorza and *should* work out of the box.
+Cores marked with :material-check-bold:{ .shipped } are shipped with Cannoli and *should* work out of the box.
 
 The last section contains higher end systems that require a standalone app.
 

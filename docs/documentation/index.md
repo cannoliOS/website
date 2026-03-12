@@ -25,7 +25,7 @@ For that I thank him, and apologize for this bastardization of his creation.
 
 Here is how cannoli_OS is planning to bring the convenience of MinUI to Android.
 
-- [Cannoli](https://github.com/cannoliOS/scorza) - a custom frontend / launcher with just the right amount of filling!
+- [Cannoli](https://github.com/cannoliOS/cannoli) - a custom frontend / launcher with just the right amount of filling!
 - [Nonna's Kitchen](https://github.com/cannoliOS/kitchen), a web client that lets you reach into the cookie jar. Upload your
   legally sourced BIOS files and ROMs, backup saves and more all without having to wrangle files.
 
