@@ -14,27 +14,68 @@
   {{ page.content }}
   <script>
     (function() {
-      if (window.innerWidth > 900) return;
-      var content = document.querySelector('.device-screen-content');
+      // GBC color palette: [body, dark accent, home button, speaker/line]
+      var gbcColors = [
+        { body: '#1a8a8a', accent: '#147070', line: '#14706f', home: '#147070', speaker: '#0f5555' }, // teal
+        { body: '#8b1a8b', accent: '#6e1470', line: '#6e146f', home: '#6e1470', speaker: '#4a0f55' }, // grape
+        { body: '#2a2aaa', accent: '#1e1e88', line: '#1e1e80', home: '#1e1e88', speaker: '#14145a' }, // blue
+        { body: '#c4a800', accent: '#9e8800', line: '#8e7a00', home: '#9e8800', speaker: '#6e5a00' }, // dandelion
+        { body: '#aa2a2a', accent: '#881e1e', line: '#801e1e', home: '#881e1e', speaker: '#5a1414' }, // berry
+        { body: '#3a8a3a', accent: '#2a702a', line: '#267026', home: '#2a702a', speaker: '#1a501a' }, // kiwi
+      ];
+      var color = gbcColors[Math.floor(Math.random() * gbcColors.length)];
+
+      // Inline the SVG and apply random color
+      var frameImg = document.querySelector('.device-frame');
+      if (frameImg) {
+        fetch(frameImg.src)
+          .then(function(r) { return r.text(); })
+          .then(function(svgText) {
+            svgText = svgText.replace(/#1a8a8a/g, color.body);
+            svgText = svgText.replace(/#178080/g, color.body);
+            svgText = svgText.replace(/#147070/g, color.home);
+            svgText = svgText.replace(/#126060/g, color.accent);
+            svgText = svgText.replace(/#14706f/g, color.line);
+            svgText = svgText.replace(/#15706f/g, color.line);
+            svgText = svgText.replace(/#083838/g, color.speaker);
+            svgText = svgText.replace(/#0f5555/g, color.speaker);
+            var wrapper = document.createElement('div');
+            wrapper.innerHTML = svgText;
+            var svg = wrapper.firstElementChild;
+            svg.classList.add('device-frame');
+            svg.style.width = '100%';
+            svg.style.height = 'auto';
+            svg.style.display = 'block';
+            svg.style.position = 'relative';
+            svg.style.zIndex = '2';
+            svg.style.pointerEvents = 'none';
+            frameImg.parentNode.replaceChild(svg, frameImg);
+          });
+      }
+
+      // Desktop: loop video normally
       var video = document.querySelector('.device-screen');
+      if (window.innerWidth > 900) {
+        if (video) video.loop = true;
+        return;
+      }
+      var content = document.querySelector('.device-screen-content');
       var belowBtn = document.querySelector('.device-below-btn');
-      var aboveLogo = document.querySelector('.device-above-logo');
       if (!content || !video) return;
       video.pause();
       function toggle() {
         content.classList.add('fade-out');
         setTimeout(function() {
+          video.currentTime = 0;
           video.play();
           if (belowBtn) belowBtn.classList.add('visible');
-          if (aboveLogo) aboveLogo.classList.add('visible');
         }, 600);
-        setTimeout(function() {
-          video.pause();
+        video.onended = function() {
+          video.onended = null;
           if (belowBtn) belowBtn.classList.remove('visible');
-          if (aboveLogo) aboveLogo.classList.remove('visible');
           content.classList.remove('fade-out');
           setTimeout(toggle, 5000);
-        }, 16000);
+        };
       }
       setTimeout(toggle, 5000);
     })();

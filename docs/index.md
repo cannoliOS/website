@@ -25,7 +25,7 @@ hide:
   </div>
   <div class="hero-device">
     <img src="resources/img/homepage/handheld.svg" class="device-frame" alt="">
-    <video class="device-screen" autoplay loop muted playsinline>
+    <video class="device-screen" autoplay muted playsinline>
       <source src="resources/img/homepage/demo.mp4" type="video/mp4">
     </video>
     <div class="device-screen-content">

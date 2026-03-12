@@ -47,7 +47,6 @@
 
   <!-- Home button (convex, at corner of vertical and top horizontal lines) -->
   <circle cx="129.5" cy="276.5" r="6.5" fill="#147070" stroke="#126060" stroke-width="0.5"/>
-  <circle cx="128.5" cy="275.5" r="2.5" fill="#18807f" opacity="0.25"/>
 
   <!-- Start / Select stacked vertically, left-aligned to grille -->
   <g transform="translate(123, 383)">
