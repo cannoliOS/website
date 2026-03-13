@@ -53,31 +53,35 @@
           });
       }
 
-      // Desktop: loop video normally
       var video = document.querySelector('.device-screen');
-      if (window.innerWidth > 900) {
-        if (video) video.loop = true;
-        return;
-      }
       var content = document.querySelector('.device-screen-content');
       var belowBtn = document.querySelector('.device-below-btn');
+      var isDesktop = window.innerWidth > 900;
       if (!content || !video) return;
-      video.pause();
+
+      video.style.opacity = '0';
+      video.load();
+
       function toggle() {
-        content.classList.add('fade-out');
-        setTimeout(function() {
+        video.load();
+        video.addEventListener('loadeddata', function() {
           video.currentTime = 0;
-          video.play();
-          if (belowBtn) belowBtn.classList.add('visible');
-        }, 600);
+          content.classList.add('fade-out');
+          setTimeout(function() {
+            video.style.opacity = '1';
+            video.play();
+            if (!isDesktop && belowBtn) belowBtn.classList.add('visible');
+          }, 600);
+        }, { once: true });
         video.onended = function() {
           video.onended = null;
-          if (belowBtn) belowBtn.classList.remove('visible');
+          video.style.opacity = '0';
+          if (!isDesktop && belowBtn) belowBtn.classList.remove('visible');
           content.classList.remove('fade-out');
           setTimeout(toggle, 5000);
         };
       }
-      setTimeout(toggle, 5000);
+      setTimeout(toggle, isDesktop ? 2000 : 5000);
     })();
   </script>
 {% endblock %}

@@ -25,15 +25,14 @@ hide:
   </div>
   <div class="hero-device">
     <img src="resources/img/homepage/handheld.svg" class="device-frame" alt="">
-    <video class="device-screen" autoplay muted playsinline>
-      <source src="resources/img/homepage/demo.mp4" type="video/mp4">
+    <video class="device-screen" muted playsinline>
+      <source src="resources/videos/demo.mp4" type="video/mp4">
     </video>
     <div class="device-screen-content">
       <img src="resources/img/logo.png" width="80" alt="cannoli logo">
       <h1>cannoli_OS</h1>
       <h3>Sweet and Opinionated<br>Retro Gaming on Android</h3>
       <a href="documentation/" class="md-button md-button--primary">Documentation</a>
-      <a href="https://github.com/cannoliOS/cannoli/releases/latest" class="md-button md-button--accent">Download</a>
     </div>
     <div class="device-below-btn">
       <a href="documentation/" class="md-button md-button--primary">Documentation</a>
